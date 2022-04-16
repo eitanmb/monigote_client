@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+.contenedor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+}
+
+.extSup {
+display: flex;
+}
+
+.extInf {
+display: flex;
+justify-content: center;
+}
+
+.headBox {
+width: 100px;
+height: 150px;
+margin-bottom: 5px;
+
+}
+
+.bodyBox {
+width: 120px;
+height: 200px;
+}
+
+
+.armBox {
+width: 40px;
+height: 180px;
+margin-top: 2px;
+}
+
+.legBox {
+width: 45px;
+height: 220px;
+}
+
+.ml {
+margin-left: 15px;
+}
+
+.mr {
+margin-right: 15px;
+}
