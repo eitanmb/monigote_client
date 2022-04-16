@@ -82,8 +82,9 @@ export const MonigoteControllers = () => {
         </FormControl>
         </Box>
 
-        <GetMiembros valores={partesVisibles} />
-
+        <Box sx={{ display: 'flex' }}>
+          <GetMiembros valores={partesVisibles} />
+        </Box>       
      </>
   )
 }

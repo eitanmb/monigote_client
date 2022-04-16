@@ -41,7 +41,7 @@ export const DrawMonigote = (props:DrawMonigoteProps) => {
   })
 
   return (
-    <div className="contenedor">
+    <div className='contenedor'>
         <div style={ headStyle } className="headBox"></div>
         <div className="extSup">
             
