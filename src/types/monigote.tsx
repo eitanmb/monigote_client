@@ -20,16 +20,3 @@ export interface Partes {
     lLeg: boolean,
     rLeg: boolean
 }
-
-export interface MiembrosProps {
-    valores: Partes,
-}
-
-export interface DrawMonigoteProps {
-    valores: Miembro[],
-}
-
-
-export interface GetMiembrosQuery {
-    miembros: Miembro[]
-}

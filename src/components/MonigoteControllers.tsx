@@ -37,9 +37,9 @@ export const MonigoteControllers = () => {
   return (
     <>
     
-        <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex' }}>
         <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
-            <FormLabel component="legend">¿Qué parte del Monigote va a mutilar?</FormLabel>
+            <FormLabel component="legend">¿Qué parte del Monigote vas a mutilar?</FormLabel>
             <FormHelperText>Handle it with care!!!!</FormHelperText>
             <FormGroup>
             <FormControlLabel
@@ -80,11 +80,8 @@ export const MonigoteControllers = () => {
             />
             </FormGroup>
         </FormControl>
-        </Box>
-
-        <Box sx={{ display: 'flex' }}>
-          <GetMiembros valores={partesVisibles} />
-        </Box>       
+        <GetMiembros valores={partesVisibles} />
+      </Box>       
      </>
   )
 }
