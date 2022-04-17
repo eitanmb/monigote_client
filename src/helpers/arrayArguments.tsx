@@ -1,7 +1,7 @@
-import { Partes } from '../types/monigote';
+import { VisibilidadMiembros } from '../@types/monigote.d.';
 
 
-export const arrayArguments = ( objeto:Partes ): string[] => {
+export const arrayArguments = ( objeto:VisibilidadMiembros ): string[] => {
     let args: string[] = [];
 
     for (const elemento of Object.entries(objeto)) {

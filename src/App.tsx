@@ -1,14 +1,14 @@
 import './App.css';
 import { apolloClient } from './apolloClient';
 import { ApolloProvider } from '@apollo/client';
-import { MonigoteControllers } from './components/MonigoteControllers';
+import { HomeScreen } from './components/HomeScreen';
 
 
 
 const App = () => {
   return (
     <ApolloProvider client={apolloClient}>
-        <MonigoteControllers />
+        <HomeScreen />
   </ApolloProvider>
   )    
 }
