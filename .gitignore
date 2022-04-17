@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 .env
+App.test.tsx
+reportWebVitals.ts
+setupTests.ts
 
 # testing
 /coverage
