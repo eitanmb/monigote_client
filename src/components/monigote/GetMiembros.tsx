@@ -35,7 +35,7 @@ export const GetMiembros = () => {
     return (
       <Grid container spacing={1} >
         <Grid item xs={12} >
-        <Box sx={ { display:"flex", justifyContent:"center",alignItems:'center', minHeight:'591px'} }>
+        <Box sx={ { display:"flex", justifyContent:"center",alignItems:'center' } }>
             <div>Ocurrio un error</div>
         </Box>
         </Grid>
@@ -54,7 +54,7 @@ export const GetMiembros = () => {
     
       <Grid container spacing={1} >
         <Grid item xs={12} >
-        <Box sx={ { display:"flex", justifyContent:"center",alignItems:'center', minHeight:'591px'} }>
+        <Box sx={ { display:"flex", justifyContent:"center",alignItems:'center'} }>
             <CircularStatic />
         </Box>
         </Grid>

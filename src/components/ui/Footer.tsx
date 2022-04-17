@@ -1,14 +1,14 @@
 import React from 'react'
-import { Box, Container, Grid, Link } from '@mui/material';
+import { Box, Container, Grid, Link, Toolbar } from '@mui/material';
 
 export const Footer = () => {
   return (
     <footer>
-        <Box sx={{ bgcolor:'#333333'}}>
+        <Toolbar sx={{bgcolor:'red', position:'static', color:'#f4f4f4', height:'10vh'} }>
         <Container>
         <Grid container spacing={2}>
             <Grid item xs={12}>
-                <Box sx={{ display:'flex', flexDirection:'column', alignItems:'center', marginBottom:"20px"}}>
+                <Box sx={{ display:'flex', flexDirection:'column' }}>
                     <Link href='/'>
                         Inicio
                     </Link>
@@ -23,7 +23,7 @@ export const Footer = () => {
             </Grid>
         </Grid>
         </Container>
-        </Box>
+        </Toolbar>
     </footer>
   )
 }
