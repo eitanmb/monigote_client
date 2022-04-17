@@ -8,10 +8,17 @@ export const Footer = () => {
         <Container>
         <Grid container spacing={2}>
             <Grid item xs={12}>
-                <Box sx={{ display:'flex', flexDirection:'column', alignContent:'center'}}>
+                <Box sx={{ display:'flex', flexDirection:'column', alignItems:'center', marginBottom:"20px"}}>
                     <Link href='/'>
-                        Home
+                        Inicio
                     </Link>
+                    <Link href='/'>
+                        Contáctenos
+                    </Link>
+                    <Link href='/'>
+                        Acerca del Monigote
+                    </Link>
+
                 </Box>
             </Grid>
         </Grid>
