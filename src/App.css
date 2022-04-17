@@ -1,30 +1,30 @@
 .headBox {
-width: 100px;
-height: 150px;
-margin-bottom: 5px;
+width: 6.25rem;
+height: 9.38rem;
+margin-bottom: .3rem;
 }
 
 .bodyBox {
-width: 120px;
-height: 200px;
+width: 7.5rem;
+height: 12.5rem;
 }
 
 
 .armBox {
-width: 40px;
-height: 180px;
-margin-top: 2px;
+width: 2.5rem;
+height: 11.25rem;
+margin-top: 0.125rem;
 }
 
 .legBox {
-width: 45px;
-height: 220px;
+width: 2.8rem;
+height: 13.75rem;
 }
 
 .ml {
-margin-left: 15px;
+margin-left: 1rem;
 }
 
 .mr {
-margin-right: 15px;
+margin-right: 1rem;
 }
