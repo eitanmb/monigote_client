@@ -7,6 +7,8 @@ import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
 import { MiembrosContextType } from '../../@types/monigote.d.';
 import { MiembrosContext} from '../../context/MiembrosContext';
+import Paper from '@mui/material/Paper';
+import { Box } from '@mui/material';
 
 
 export const MonigoteControllers = () => {
@@ -22,9 +24,11 @@ export const MonigoteControllers = () => {
 
 
   return (
+    <Box sx={{ width: 500 }}>
+    <Paper elevation={3}>
     <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
-        <FormLabel component="legend">¿Qué parte del Monigote vas a mutilar?</FormLabel>
-        <FormHelperText>Handle it with care!!!!</FormHelperText>
+        <FormLabel component="legend">Handle it with care!!!!</FormLabel>
+        <FormHelperText>Marca/Desmarca las casillas</FormHelperText>
         <FormGroup>
         <FormControlLabel
             control={
@@ -64,6 +68,8 @@ export const MonigoteControllers = () => {
         />
         </FormGroup>
     </FormControl>
+    </Paper>
+    </Box>
   )
 }
 

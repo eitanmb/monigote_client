@@ -5,7 +5,8 @@ import { arrayArguments } from '../../helpers/arrayArguments';
 import { DrawMonigote } from './DrawMonigote';
 import { MiembrosContext} from '../../context/MiembrosContext';
 import { Grid, Box } from '@mui/material';
-import CircularStatic from '../ui/ProgresBar';
+import CircularColor from '../ui/Loading';
+import ErrorBox from '../ui/Error';
 
 
 const GET_MIEMBROS = gql`
@@ -36,7 +37,7 @@ export const GetMiembros = () => {
       <Grid container spacing={1} >
         <Grid item xs={12} >
         <Box sx={ { display:"flex", justifyContent:"center",alignItems:'center' } }>
-            <div>Ocurrio un error</div>
+           <ErrorBox />
         </Box>
         </Grid>
       </Grid>
@@ -55,7 +56,7 @@ export const GetMiembros = () => {
       <Grid container spacing={1} >
         <Grid item xs={12} >
         <Box sx={ { display:"flex", justifyContent:"center",alignItems:'center'} }>
-            <CircularStatic />
+            <CircularColor />
         </Box>
         </Grid>
       </Grid>

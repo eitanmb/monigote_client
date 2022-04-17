@@ -4,7 +4,7 @@ import { Box, Container, Grid, Link, Toolbar } from '@mui/material';
 export const Footer = () => {
   return (
     <footer>
-        <Toolbar sx={{bgcolor:'red', position:'static', color:'#f4f4f4', height:'10vh'} }>
+        <Toolbar sx={ { bgcolor:'red', position:'static', color:'#f4f4f4', height:'12vh' } }>
         <Container>
         <Grid container spacing={2}>
             <Grid item xs={12}>

@@ -9,14 +9,14 @@ export const HomeScreen = () => {
 
   return (
     <MiembrosProvider>
-      <Box sx={{ display:'flex', flexDirection:'column'}}>
+      <Box sx={{ display:'flex', flexDirection:'column', height:'100vh'}}>
         <NavBar />
-        <Container sx={ { border:'1px solid black', height:'80vh', marginY:'10px' }}>
-          <Grid container spacing={0} sx={{border:'1px solid black', height:'80vh' }}>
+        <Container sx={ { marginY:'7px' }}>
+          <Grid container spacing={0} sx={{ height:'80vh' }}>
             <Grid item xs={4} sx={{ display:'flex', alignItems:'center'}}>
               <MonigoteControllers />
             </Grid>
-            <Grid item xs={8} sx={{border:'1px solid black', display:'flex', alignItems:'center'}}>
+            <Grid item xs={8} sx={{ display:'flex', alignItems:'center' }}>
               <GetMiembros />
             </Grid>
           </Grid>

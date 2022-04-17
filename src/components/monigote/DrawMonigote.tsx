@@ -82,8 +82,7 @@ export const DrawMonigote = (props:DrawMonigoteProps) => {
           <div style={ lLegStyle } className="legBox mr"></div>
           </Box>
         </Grid>
-
-        
+       
         <Grid item xs={6}>
         <Box sx={ { display:"flex", justifyContent:"start"} }>
           <div style={ rLegStyle } className="legBox ml"></div>
