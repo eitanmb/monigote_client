@@ -4,7 +4,8 @@ import { GetMiembrosQuery, MiembrosContextType } from '../../@types/monigote.d.'
 import { arrayArguments } from '../../helpers/arrayArguments';
 import { DrawMonigote } from './DrawMonigote';
 import { MiembrosContext} from '../../context/MiembrosContext';
-import { Grid } from '@mui/material';
+import { Grid, Box } from '@mui/material';
+import CircularStatic from '../ui/ProgresBar';
 
 
 const GET_MIEMBROS = gql`
@@ -32,10 +33,12 @@ export const GetMiembros = () => {
   
   if (error) {
     return (
-      <Grid item xs={8}>
-        <div>
-        An error occurred
-      </div>
+      <Grid container spacing={1} >
+        <Grid item xs={12} >
+        <Box sx={ { display:"flex", justifyContent:"center",alignItems:'center', minHeight:'591px'} }>
+            <div>Ocurrio un error</div>
+        </Box>
+        </Grid>
       </Grid>
       
     )
@@ -43,20 +46,20 @@ export const GetMiembros = () => {
  
   if (data ) {
     return (
-      <Grid item xs={8}>
         <DrawMonigote valores={ data.miembros } />
-      </Grid>
     )
   }
   
   return (
-    <Grid item xs={8}>
-        <div>
-        Loading
-      </div>
-    </Grid>
+    
+      <Grid container spacing={1} >
+        <Grid item xs={12} >
+        <Box sx={ { display:"flex", justifyContent:"center",alignItems:'center', minHeight:'591px'} }>
+            <CircularStatic />
+        </Box>
+        </Grid>
+      </Grid>
   )
-
 }
 
 

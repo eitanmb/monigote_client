@@ -7,7 +7,6 @@ import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
 import { MiembrosContextType } from '../../@types/monigote.d.';
 import { MiembrosContext} from '../../context/MiembrosContext';
-import { Grid } from '@mui/material';
 
 
 export const MonigoteControllers = () => {
@@ -23,8 +22,6 @@ export const MonigoteControllers = () => {
 
 
   return (
-    <Grid item xs={4}>
-
     <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
         <FormLabel component="legend">¿Qué parte del Monigote vas a mutilar?</FormLabel>
         <FormHelperText>Handle it with care!!!!</FormHelperText>
@@ -67,7 +64,6 @@ export const MonigoteControllers = () => {
         />
         </FormGroup>
     </FormControl>
-    </Grid>
   )
 }
 

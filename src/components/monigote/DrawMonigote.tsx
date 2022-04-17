@@ -47,7 +47,7 @@ export const DrawMonigote = (props:DrawMonigoteProps) => {
     
       <Grid container spacing={1} >
         <Grid item xs={12} >
-        <Box sx={ { display:"flex", justifyContent:"center"} } component='div'>
+        <Box sx={ { display:"flex", justifyContent:"center"} }>
             <div style={ headStyle } className="headBox"></div>
         </Box>
         </Grid>
