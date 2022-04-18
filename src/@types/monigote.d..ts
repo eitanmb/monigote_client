@@ -32,4 +32,10 @@ export interface MiembrosContextType {
     partesVisibles: VisibilidadMiembros,
     updatePartesVisibles: (partes: VisibilidadMiembros, event: React.ChangeEvent<HTMLInputElement>) => void;
 }
+
+
+export interface ISwitchThemeContext {
+    isDarkTheme: boolean,
+    setIsDarkTheme: (isDarkTheme:boolean) => void
+}
  
