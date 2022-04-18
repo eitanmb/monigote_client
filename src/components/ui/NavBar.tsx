@@ -21,19 +21,19 @@ export default function NavBar( props: any ) {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-            EL MONIGOTE
+            Monigote
           </Typography>
-         
-          <FormGroup>
-            <FormControlLabel
-              control={
-                <Switch checked={isDarkTheme} onChange={changeTheme} />
-              }
-              label="Dark Theme"
-            />
-          </FormGroup>
-        </Toolbar>
-      </AppBar>
-    </Box>
+
+            <FormGroup>
+              <FormControlLabel
+                control={
+                  <Switch checked={isDarkTheme} onChange={changeTheme} />
+                }
+                label="Modo Oscuro"
+              />
+            </FormGroup>
+          </Toolbar>
+        </AppBar>
+      </Box>
   );
 }

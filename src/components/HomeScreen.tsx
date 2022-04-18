@@ -6,24 +6,22 @@ import NavBar from './ui/NavBar';
 import { Footer } from './ui/Footer';
 import { useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Typography from '@mui/material/Typography';
 
+const light:ThemeOptions = {
+  palette: {
+    mode: "light",
+  },
+};
 
+const dark:ThemeOptions = {
+  palette: {
+    mode: "dark",
+  },
+};
 
 export const HomeScreen = () => {
 
-  const light:ThemeOptions = {
-    palette: {
-      mode: "light",
-    },
-  };
-  
-  const dark:ThemeOptions = {
-    palette: {
-      mode: "dark",
-    },
-  };
-
- // The light theme is used by default
  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
 
 
@@ -33,11 +31,15 @@ export const HomeScreen = () => {
       <CssBaseline />
       <Box sx={{ display:'flex', flexDirection:'column', height:'100vh'}}>
         <NavBar tema={ isDarkTheme } setTema={ setIsDarkTheme } /> 
-       
-        <Container sx={ { marginY:'7px' }}>
-          <Grid container spacing={0} sx={{ height:'80vh' }}>
-            <Grid item xs={4} sx={{ display:'flex', alignItems:'center'}}>
-              <MonigoteControllers />
+        <Container>
+          <Grid container spacing={0} sx={{ height:'85vh', display:'flex',flexDirection:'row',  alignItems:'center'}}>  
+            <Grid item xs={4} sx={{ display:'flex',flexDirection:'column', alignItems:'start'}}>
+              <Box sx={{ width: 500 }}>
+                <Typography color='text.secondary' variant="h5" component="div" align='left' sx={{ marginBottom:2}}>
+                        ¿Qué miembro quitarás al Monigote?
+                </Typography>
+                <MonigoteControllers />
+              </Box>
             </Grid>
             <Grid item xs={8} sx={{ display:'flex', alignItems:'center' }}>
               <GetMiembros />

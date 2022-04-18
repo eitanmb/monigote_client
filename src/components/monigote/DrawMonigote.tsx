@@ -2,7 +2,6 @@ import { Grid } from '@mui/material';
 import { Box } from '@mui/material';
 import { Estilos, DrawMonigoteProps } from '../../@types/monigote.d.';
 
-
 export const DrawMonigote = (props:DrawMonigoteProps) => {
 
   
@@ -46,6 +45,7 @@ export const DrawMonigote = (props:DrawMonigoteProps) => {
   return (
     
       <Grid container spacing={1} >
+        
         <Grid item xs={12} >
         <Box sx={ { display:"flex", justifyContent:"center"} }>
             <div style={ headStyle } className="headBox"></div>
