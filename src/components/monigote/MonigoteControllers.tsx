@@ -24,7 +24,7 @@ export const MonigoteControllers = () => {
   return (
     <Paper elevation={3}>
     <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
-        <FormLabel component="legend">Manégese con cuidado</FormLabel>
+        <FormLabel component="legend">Manéjese con cuidado</FormLabel>
         <FormGroup>
         <FormControlLabel
             control={
