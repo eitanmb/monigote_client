@@ -4,10 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
-.env
-App.test.tsx
-reportWebVitals.ts
-setupTests.ts
+/src/App.test.tsx
+/src/reportWebVitals.ts
+/src/setupTests.ts
 
 # testing
 /coverage
