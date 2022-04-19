@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { useQuery, gql } from '@apollo/client';
-import { GetMiembrosQuery, MiembrosContextType } from '../../@types/monigote.d.';
+import { IGetMiembrosQuery, IMiembrosContextType } from '../../@types/monigote.d.';
 import { arrayArguments } from '../../helpers/arrayArguments';
 import { DrawMonigote } from './DrawMonigote';
 import { MiembrosContext} from '../../context/MiembrosContext';
@@ -24,10 +24,10 @@ const GET_MIEMBROS = gql`
  
 export const GetMiembros = () => {
 
-  const { partesVisibles } = useContext(MiembrosContext) as MiembrosContextType;
+  const { partesVisibles } = useContext(MiembrosContext) as IMiembrosContextType;
   const  listaMiembrosVisibles = arrayArguments( partesVisibles );
   
-  const { error, data } = useQuery<GetMiembrosQuery>(GET_MIEMBROS, {
+  const { error, data } = useQuery<IGetMiembrosQuery>(GET_MIEMBROS, {
     variables: { nombre: listaMiembrosVisibles },
   });
 

@@ -1,16 +1,16 @@
 import { Grid } from '@mui/material';
 import { Box } from '@mui/material';
-import { Estilos, DrawMonigoteProps } from '../../@types/monigote.d.';
+import { IEstilos, IDrawMonigoteProps } from '../../@types/monigote.d.';
 
-export const DrawMonigote = (props:DrawMonigoteProps) => {
+export const DrawMonigote = (props:IDrawMonigoteProps) => {
 
   
-  let bodyStyle:Estilos | undefined = undefined;
-  let headStyle:Estilos | undefined = undefined;
-  let rArmStyle:Estilos | undefined = undefined;
-  let lArmStyle:Estilos | undefined = undefined;
-  let rLegStyle:Estilos | undefined = undefined;
-  let lLegStyle:Estilos | undefined = undefined;
+  let bodyStyle:IEstilos | undefined = undefined;
+  let headStyle:IEstilos | undefined = undefined;
+  let rArmStyle:IEstilos | undefined = undefined;
+  let lArmStyle:IEstilos | undefined = undefined;
+  let rLegStyle:IEstilos | undefined = undefined;
+  let lLegStyle:IEstilos | undefined = undefined;
   
   const miembros = props.valores;
 
@@ -88,7 +88,6 @@ export const DrawMonigote = (props:DrawMonigoteProps) => {
           <div style={ rLegStyle } className="legBox ml"></div>
           </Box>
         </Grid>
-          
       </Grid>
   )
 }

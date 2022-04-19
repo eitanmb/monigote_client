@@ -1,12 +1,12 @@
 import{ createContext, ReactNode, useState, FC } from 'react';
-import { MiembrosContextType, VisibilidadMiembros } from '../@types/monigote.d.';
+import { IMiembrosContextType, IVisibilidadMiembros } from '../@types/monigote.d.';
 
 
-export const MiembrosContext = createContext<MiembrosContextType | null>( null );
+export const MiembrosContext = createContext<IMiembrosContextType | null>( null );
 
 const MiembrosProvider:FC<ReactNode> = ({ children }) => {
 
-    const [partesVisibles, setPartesVisibles] = useState<VisibilidadMiembros>({
+    const [partesVisibles, setPartesVisibles] = useState<IVisibilidadMiembros>({
         head: true,
         body: true,
         lArm: true,
@@ -16,7 +16,7 @@ const MiembrosProvider:FC<ReactNode> = ({ children }) => {
     });
 
     
-    const updatePartesVisibles = (partes: VisibilidadMiembros, event: React.ChangeEvent<HTMLInputElement>) => {
+    const updatePartesVisibles = (partes: IVisibilidadMiembros, event: React.ChangeEvent<HTMLInputElement>) => {
         setPartesVisibles({
             ...partes,
             [event.target.name]: event.target.checked,

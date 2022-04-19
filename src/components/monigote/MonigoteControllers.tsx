@@ -4,14 +4,14 @@ import FormControl from '@mui/material/FormControl';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import { MiembrosContextType } from '../../@types/monigote.d.';
+import { IMiembrosContextType } from '../../@types/monigote.d.';
 import { MiembrosContext} from '../../context/MiembrosContext';
 import Paper from '@mui/material/Paper';
 
 
 export const MonigoteControllers = () => {
 
-  const { partesVisibles, updatePartesVisibles } = useContext(MiembrosContext) as MiembrosContextType;
+  const { partesVisibles, updatePartesVisibles } = useContext(MiembrosContext) as IMiembrosContextType;
   
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     updatePartesVisibles( partesVisibles, event );

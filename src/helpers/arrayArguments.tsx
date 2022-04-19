@@ -1,7 +1,7 @@
-import { VisibilidadMiembros } from '../@types/monigote.d.';
+import { IVisibilidadMiembros } from '../@types/monigote.d.';
 
 
-export const arrayArguments = ( objeto:VisibilidadMiembros ): string[] => {
+export const arrayArguments = ( objeto:IVisibilidadMiembros ): string[] => {
     let args: string[] = [];
 
     for (const elemento of Object.entries(objeto)) {

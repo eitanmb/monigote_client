@@ -1,17 +1,17 @@
 
-export interface Miembro {
+export interface IMiembro {
     id: string
     nombre: string
-    estilos: Estilos
+    estilos: IEstilos
 }
 
-export interface Estilos {
+export interface IEstilos {
     background: string
     borderRadius: string
     transform?: string
 }
 
-export interface VisibilidadMiembros {
+export interface IVisibilidadMiembros {
     head: boolean,
     body: boolean,
     lArm: boolean,
@@ -20,22 +20,26 @@ export interface VisibilidadMiembros {
     rLeg: boolean
 }
 
-export interface GetMiembrosQuery {
-    miembros: Miembro[]
+export interface IGetMiembrosQuery {
+    miembros: IMiembro[]
 }
 
-export interface DrawMonigoteProps {
-  valores: Miembro[],
+export interface IDrawMonigoteProps {
+  valores: IMiembro[],
 }
 
-export interface MiembrosContextType {
-    partesVisibles: VisibilidadMiembros,
-    updatePartesVisibles: (partes: VisibilidadMiembros, event: React.ChangeEvent<HTMLInputElement>) => void;
+export interface INavBarProps {
+    tema: boolean,
+    setTema: React.Dispatch<React.SetStateAction<boolean>>
 }
 
+export interface IMiembrosContextType {
+    partesVisibles: IVisibilidadMiembros,
+    updatePartesVisibles: (partes: IVisibilidadMiembros, event: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
 export interface ISwitchThemeContext {
     isDarkTheme: boolean,
     setIsDarkTheme: (isDarkTheme:boolean) => void
 }
- 
+
