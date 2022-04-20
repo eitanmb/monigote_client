@@ -1,16 +1,18 @@
 import { useContext } from 'react';
-import FormLabel from '@mui/material/FormLabel';
-import FormControl from '@mui/material/FormControl';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import FormControl from '@mui/material/FormControl';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormGroup from '@mui/material/FormGroup';
+import FormLabel from '@mui/material/FormLabel';
+import Paper from '@mui/material/Paper';
+
 import { IMiembrosContextType } from '../../@types/monigote.d.';
 import { MiembrosContext} from '../../context/MiembrosContext';
-import Paper from '@mui/material/Paper';
 
 
 export const MonigoteControllers = () => {
 
+  //Si no coloco el Type Assertion, typescript se queja ¿¿??
   const { partesVisibles, updatePartesVisibles } = useContext(MiembrosContext) as IMiembrosContextType;
   
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

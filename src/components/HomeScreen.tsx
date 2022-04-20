@@ -1,12 +1,13 @@
-import MiembrosProvider from '../context/MiembrosContext';
-import { MonigoteControllers } from './monigote/MonigoteControllers';
-import { GetMiembros } from './monigote/GetMiembros';
 import { Container, Grid, Box, CssBaseline, ThemeOptions } from '@mui/material';
-import NavBar from './ui/NavBar';
-import { Footer } from './ui/Footer';
-import { useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useState } from "react";
 import Typography from '@mui/material/Typography';
+
+import { Footer } from './ui/Footer';
+import { GetMiembros } from './monigote/GetMiembros';
+import { MonigoteControllers } from './monigote/MonigoteControllers';
+import MiembrosProvider from '../context/MiembrosContext';
+import NavBar from './ui/NavBar';
 
 const light:ThemeOptions = {
   palette: {

@@ -1,10 +1,11 @@
+import { Grid, Box } from '@mui/material';
 import { useContext } from 'react';
 import { useQuery, gql } from '@apollo/client';
-import { IGetMiembrosQuery, IMiembrosContextType } from '../../@types/monigote.d.';
+
 import { arrayArguments } from '../../helpers/arrayArguments';
 import { DrawMonigote } from './DrawMonigote';
+import { IGetMiembrosQuery, IMiembrosContextType } from '../../@types/monigote.d.';
 import { MiembrosContext} from '../../context/MiembrosContext';
-import { Grid, Box } from '@mui/material';
 import CircularColor from '../ui/Loading';
 import ErrorBox from '../ui/Error';
 

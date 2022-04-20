@@ -1,5 +1,5 @@
-import { Copyright } from '@mui/icons-material';
 import { Box, Container, Grid, Toolbar } from '@mui/material';
+import { Copyright } from '@mui/icons-material';
 import Typography from '@mui/material/Typography';
 
 export const Footer = () => {

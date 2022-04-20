@@ -35,7 +35,7 @@ export interface INavBarProps {
 
 export interface IMiembrosContextType {
     partesVisibles: IVisibilidadMiembros,
-    updatePartesVisibles: (partes: IVisibilidadMiembros, event: React.ChangeEvent<HTMLInputElement>) => void;
+    updatePartesVisibles: (partes: IVisibilidadMiembros, event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export interface ISwitchThemeContext {
