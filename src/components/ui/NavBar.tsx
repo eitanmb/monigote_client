@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Switch, FormGroup, FormControlLabel } from "@mui/material";
-import { INavBarProps } from '../../@types/monigote.d.'
+import { INavBarProps } from '../../types/monigote.d.'
 
 
 export default function NavBar( props: INavBarProps ) {

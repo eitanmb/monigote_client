@@ -1,4 +1,4 @@
-import { IVisibilidadMiembros } from '../@types/monigote.d.';
+import { IVisibilidadMiembros } from '../types/monigote.d.';
 
 
 export const arrayArguments = ( objeto:IVisibilidadMiembros ): string[] => {

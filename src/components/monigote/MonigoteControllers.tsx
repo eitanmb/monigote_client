@@ -6,7 +6,7 @@ import FormGroup from '@mui/material/FormGroup';
 import FormLabel from '@mui/material/FormLabel';
 import Paper from '@mui/material/Paper';
 
-import { IMiembrosContextType } from '../../@types/monigote.d.';
+import { IMiembrosContextType } from '../../types/monigote.d.';
 import { MiembrosContext} from '../../context/MiembrosContext';
 
 

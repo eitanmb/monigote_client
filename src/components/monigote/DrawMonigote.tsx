@@ -1,5 +1,5 @@
 import { Grid, Box } from '@mui/material';
-import { IEstilos, IDrawMonigoteProps } from '../../@types/monigote.d.';
+import { IEstilos, IDrawMonigoteProps } from '../../types/monigote.d.';
 
 export const DrawMonigote = (props:IDrawMonigoteProps) => {
 

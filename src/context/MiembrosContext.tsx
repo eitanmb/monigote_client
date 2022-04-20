@@ -1,5 +1,5 @@
 import{ createContext, ReactNode, useState, FC } from 'react';
-import { IMiembrosContextType, IVisibilidadMiembros } from '../@types/monigote.d.';
+import { IMiembrosContextType, IVisibilidadMiembros } from '../types/monigote.d.';
 
 
 export const MiembrosContext = createContext<IMiembrosContextType | null>( null );

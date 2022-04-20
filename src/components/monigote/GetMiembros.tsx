@@ -1,37 +1,22 @@
 import { Grid, Box } from '@mui/material';
 import { useContext } from 'react';
-import { useQuery, gql } from '@apollo/client';
 
 import { arrayArguments } from '../../helpers/arrayArguments';
 import { DrawMonigote } from './DrawMonigote';
-import { IGetMiembrosQuery, IMiembrosContextType } from '../../@types/monigote.d.';
+import { GetMiembrosQuery } from '../graphql/getMiembrosQuery';
+import { IMiembrosContextType } from '../../types/monigote.d.';
 import { MiembrosContext} from '../../context/MiembrosContext';
 import CircularColor from '../ui/Loading';
 import ErrorBox from '../ui/Error';
 
-
-const GET_MIEMBROS = gql`
-  query getMiembrosByName($nombre: [String]) {
-    miembros(nombre: $nombre) {
-      nombre
-      estilos {
-        background
-        borderRadius
-        transform
-      }
-    }
-  }
-`;
  
 export const GetMiembros = () => {
 
   const { partesVisibles } = useContext(MiembrosContext) as IMiembrosContextType;
   const  listaMiembrosVisibles = arrayArguments( partesVisibles );
   
-  const { error, data } = useQuery<IGetMiembrosQuery>(GET_MIEMBROS, {
-    variables: { nombre: listaMiembrosVisibles },
-  });
-
+  const { error, data } = GetMiembrosQuery(listaMiembrosVisibles)
+  
   
   if (error) {
     return (
@@ -48,19 +33,19 @@ export const GetMiembros = () => {
  
   if (data ) {
     return (
-        <DrawMonigote valores={ data.miembros } />
+      <DrawMonigote valores={ data.miembros } />
     )
   }
   
   return (
     
-      <Grid container spacing={1} >
-        <Grid item xs={12} >
-        <Box sx={ { display:"flex", justifyContent:"center",alignItems:'center'} }>
-            <CircularColor />
-        </Box>
-        </Grid>
+    <Grid container spacing={1} >
+      <Grid item xs={12} >
+      <Box sx={ { display:"flex", justifyContent:"center",alignItems:'center'} }>
+          <CircularColor />
+      </Box>
       </Grid>
+    </Grid>
   )
 }
 

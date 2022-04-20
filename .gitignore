@@ -5,15 +5,14 @@
 /.pnp
 .pnp.js
 /src/App.test.tsx
-/src/reportWebVitals.ts
 /src/setupTests.ts
 
 # testing
 /coverage
 
 # production
-/public
 /build
+/public
 
 # misc
 .DS_Store
