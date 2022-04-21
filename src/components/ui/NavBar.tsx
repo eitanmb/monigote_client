@@ -13,7 +13,6 @@ export default function NavBar( props: INavBarProps ) {
 
   const changeTheme = () => {
     setIsDarkTheme(!isDarkTheme);
-    console.log('change-isDark',isDarkTheme);
   }
 
   return (
