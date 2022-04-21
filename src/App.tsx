@@ -1,7 +1,7 @@
 import './App.css';
 import { apolloClient } from './apolloClient';
 import { ApolloProvider } from '@apollo/client';
-import { HomeScreen } from './components/HomeScreen';
+import { HomeScreen } from './components/ui/HomeScreen';
 
 
 
