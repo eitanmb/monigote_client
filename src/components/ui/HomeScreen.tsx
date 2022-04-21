@@ -35,7 +35,7 @@ export const HomeScreen = () => {
         <Container>
           <Grid container spacing={0} sx={{ height:'85vh', display:'flex',flexDirection:'row',  alignItems:'center'}}>  
             <Grid item xs={4} sx={{ display:'flex',flexDirection:'column', alignItems:'start'}}>
-              <Box sx={{ width: 500 }}>
+              <Box>
                 <Typography color='text.secondary' variant="h5" component="div" align='left' sx={{ marginBottom:2}}>
                         ¿Qué miembro quitarás al Monigote?
                 </Typography>
