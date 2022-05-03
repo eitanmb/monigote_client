@@ -1,53 +1,30 @@
 import { Grid, Box } from '@mui/material';
-import { IEstilos, IDrawMonigoteProps } from '../../types/monigote.d.';
+import { IMiembrosEstilos, IDrawMonigoteProps } from '../../types/monigote.d.';
+
 
 export const DrawMonigote = (props:IDrawMonigoteProps) => {
-
   
-  let bodyStyle:IEstilos | undefined = undefined;
-  let headStyle:IEstilos | undefined = undefined;
-  let rArmStyle:IEstilos | undefined = undefined;
-  let lArmStyle:IEstilos | undefined = undefined;
-  let rLegStyle:IEstilos | undefined = undefined;
-  let lLegStyle:IEstilos | undefined = undefined;
+  const estilos: IMiembrosEstilos = {
+    body: undefined,
+    head: undefined,
+    lArm: undefined,
+    rArm: undefined,
+    lLeg: undefined,
+    rLeg: undefined
+  }
   
   const miembros = props.valores;
 
   miembros.forEach( miembro => {
-    switch( miembro.nombre ) {
-      case "body":
-        bodyStyle = miembro.estilos;
-        break;
-
-      case "head":
-        headStyle = miembro.estilos;
-        break;
-
-      case "rArm":
-        rArmStyle = miembro.estilos;
-        break;
-
-      case "lArm":
-        lArmStyle = miembro.estilos;
-        break;
-
-      case "rLeg":
-        rLegStyle = miembro.estilos;
-        break;
-
-      case "lLeg":
-        lLegStyle = miembro.estilos;
-        break;
-    }
+    estilos[miembro.nombre] = miembro.estilos;
   });
 
   return (
-    
       <Grid container spacing={1} >
         
         <Grid item xs={12} >
         <Box sx={ { display:"flex", justifyContent:"center"} }>
-            <div style={ headStyle } className="headBox"></div>
+            <div style={ estilos.head } className="headBox"></div>
         </Box>
         </Grid>
 
@@ -55,7 +32,7 @@ export const DrawMonigote = (props:IDrawMonigoteProps) => {
         <Box sx={ 
           { display:"flex", justifyContent:"end"}
         }>
-          <div style={ lArmStyle } className="armBox mr"></div>
+          <div style={ estilos.lArm } className="armBox mr"></div>
           </Box>
         </Grid>
 
@@ -63,7 +40,7 @@ export const DrawMonigote = (props:IDrawMonigoteProps) => {
         <Box sx={ 
             { display:"flex", justifyContent:"center" }
         }>
-          <div style={ bodyStyle } className="bodyBox"></div>
+          <div style={ estilos.body } className="bodyBox"></div>
           </Box>
 
         </Grid>
@@ -72,19 +49,19 @@ export const DrawMonigote = (props:IDrawMonigoteProps) => {
         <Box sx={ 
           { display:"flex", justifyContent:"start" }
         }>
-          <div style={ rArmStyle } className="armBox ml"></div>
+          <div style={ estilos.rArm } className="armBox ml"></div>
           </Box>
         </Grid>
 
         <Grid item xs={6}>
         <Box sx={ { display:"flex", justifyContent:"end" } }>
-          <div style={ lLegStyle } className="legBox mr"></div>
+          <div style={ estilos.lLeg } className="legBox mr"></div>
           </Box>
         </Grid>
        
         <Grid item xs={6}>
         <Box sx={ { display:"flex", justifyContent:"start"} }>
-          <div style={ rLegStyle } className="legBox ml"></div>
+          <div style={ estilos.rLeg } className="legBox ml"></div>
           </Box>
         </Grid>
       </Grid>

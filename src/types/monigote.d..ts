@@ -10,6 +10,16 @@ export interface IEstilos {
     transform?: string
 }
 
+export interface IMiembrosEstilos {
+    [index: string]: IEstilos | undefined,
+    body: IEstilos | undefined,
+    head: IEstilos | undefined,
+    lArm: IEstilos | undefined,
+    rArm: IEstilos | undefined,
+    lLeg: IEstilos | undefined,
+    rLeg: IEstilos | undefined
+}
+
 export interface IVisibilidadMiembros {
     head: boolean,
     body: boolean,
@@ -37,10 +47,6 @@ export interface IMiembrosContextType {
     updatePartesVisibles: (partes: IVisibilidadMiembros, event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export interface IMiembrosContextType {
-    partesVisibles: IVisibilidadMiembros,
-    updatePartesVisibles: (partes: IVisibilidadMiembros, event: React.ChangeEvent<HTMLInputElement>) => void
-}
 
 export interface ISwitchThemeContext {
     isDarkTheme: boolean,

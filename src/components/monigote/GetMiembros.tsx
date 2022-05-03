@@ -12,7 +12,15 @@ import ErrorBox from '../ui/Error';
  
 export const GetMiembros = () => {
 
-  const { partesVisibles } = useContext(MiembrosContext) as IMiembrosContextType;
+ 
+  const partes = useContext<IMiembrosContextType | null >(MiembrosContext);
+
+  if (!partes) {
+    return <></>
+  }
+
+  const { partesVisibles } = partes;
+
   const  listaMiembrosVisibles = arrayArguments( partesVisibles );
   
   const { error, data } = GetMiembrosQuery(listaMiembrosVisibles)

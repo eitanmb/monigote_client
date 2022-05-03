@@ -12,15 +12,13 @@ import { MiembrosContext} from '../../context/MiembrosContext';
 
 export const MonigoteControllers = () => {
 
-  //Si no coloco el Type Assertion, typescript se queja ¿¿??
   const { partesVisibles, updatePartesVisibles } = useContext(MiembrosContext) as IMiembrosContextType;
+  
+  const { body, head, lArm, rArm, lLeg, rLeg } = partesVisibles;
   
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     updatePartesVisibles( partesVisibles, event );
   };
-
-
-  const { body, head, lArm, rArm, lLeg, rLeg } = partesVisibles;
 
 
   return (
