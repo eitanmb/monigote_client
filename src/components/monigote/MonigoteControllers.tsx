@@ -13,7 +13,7 @@ export const MonigoteControllers = () => {
 
   const partesState = useContext(MiembrosContext);
 
-  if (!partesState) throw new Error("The state is setting to null");
+  if (!partesState) return <></>;
   
   const { body, head, lArm, rArm, lLeg, rLeg } = partesState.partesVisibles;
   

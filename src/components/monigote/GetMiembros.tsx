@@ -4,7 +4,6 @@ import { useContext } from 'react';
 import { arrayArguments } from '../../helpers/arrayArguments';
 import { DrawMonigote } from './DrawMonigote';
 import { GetMiembrosQuery } from '../graphql/getMiembrosQuery';
-import { IMiembrosContextType } from '../../types/monigote.d.';
 import { MiembrosContext} from '../../context/MiembrosContext';
 import CircularColor from '../ui/Loading';
 import ErrorBox from '../ui/Error';
@@ -13,13 +12,11 @@ import ErrorBox from '../ui/Error';
 export const GetMiembros = () => {
 
  
-  const partes = useContext<IMiembrosContextType | null >(MiembrosContext);
+  const partesState = useContext(MiembrosContext);
 
-  if (!partes) {
-    return <></>
-  }
+  if (!partesState) return <></>;
 
-  const { partesVisibles } = partes;
+  const { partesVisibles } = partesState;
 
   const  listaMiembrosVisibles = arrayArguments( partesVisibles );
   
