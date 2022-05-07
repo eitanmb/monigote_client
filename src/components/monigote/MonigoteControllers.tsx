@@ -6,20 +6,20 @@ import FormGroup from '@mui/material/FormGroup';
 import FormLabel from '@mui/material/FormLabel';
 import Paper from '@mui/material/Paper';
 
-import { IMiembrosContextType } from '../../types/monigote.d.';
 import { MiembrosContext} from '../../context/MiembrosContext';
 
 
 export const MonigoteControllers = () => {
 
-  const { partesVisibles, updatePartesVisibles } = useContext(MiembrosContext) as IMiembrosContextType;
+  const partesState = useContext(MiembrosContext);
+
+  if (!partesState) throw new Error("The state is setting to null");
   
-  const { body, head, lArm, rArm, lLeg, rLeg } = partesVisibles;
+  const { body, head, lArm, rArm, lLeg, rLeg } = partesState.partesVisibles;
   
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    updatePartesVisibles( partesVisibles, event );
+    partesState.updatePartesVisibles( partesState.partesVisibles, event );
   };
-
 
   return (
     <Paper elevation={3}>
